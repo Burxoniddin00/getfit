@@ -1,8 +1,13 @@
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import React from "react";
 import preview from "@/img/preview.png";
 import im from "@/img/get.jpg";
 import im2 from "@/img/get2.jpg";
+import VideoPlayer from "../vidyo/vidyo";
+import MasteraCard from "../masterCard/masteraCard";
+import Swager from "../swager/swager";
+import ClentCard from "../clentCard/clentCard";
 const Mani = () => {
   let data = [
     {
@@ -30,8 +35,9 @@ const Mani = () => {
       titel: "Samaradorlik bilan tana muskul va relief darajasini oshirish",
     },
   ];
+
   return (
-    <div className="w-[80%] mx-auto">
+    <div className="w-[80%] mx-auto z-50">
       <main>
         <section>
           <div className="pt-24 group text-center  w-[300px] lg:w-[450px] max-w-lg mx-auto">
@@ -90,9 +96,28 @@ const Mani = () => {
               Kurs mualliflardan videolavhalar
             </h2>
           </div>
-            
+          <div className="grid grid-cols-2 gap-5 max-lg:grid-cols-1">
+            <VideoPlayer />
+            <VideoPlayer />
+          </div>
         </section>
-        
+        <section className="mt-24 ">
+          <h1 className="text-[#111633] lg:leading-loose text-2xl font-black  lg:text-4xl mb-[65px] text-center">
+            KURS MUALLIFLARI
+          </h1>
+          <div className="grid gap-8  max-w-5xl w-full px-4  grid-cols-2 max-lg:grid-cols-1">
+            <MasteraCard />
+            <MasteraCard />
+            <MasteraCard />
+          </div>
+        </section>
+        <section>
+          <Swager />
+        </section>
+        <section>
+          <ClentCard />
+        </section>
+     
       </main>
     </div>
   );
