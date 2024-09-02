@@ -38,10 +38,10 @@ const VideoPlayer = () => {
   return (
     <div className="rounded-2xl">
       <div className="w-full max-w-3xl">
-        <div className="relative">
+        <div className="relative group">
           <video
             ref={videoRef}
-            className="w-full rounded-lg shadow-lg relative"
+            className="w-full rounded-lg shadow-lg relative "
             controls
             controlsList="nodownload"
             loop
@@ -55,7 +55,7 @@ const VideoPlayer = () => {
             Sizning brauzeringiz video tegini qo'llab-quvvatlamaydi.
           </video>
           <div
-            className={`absolute bg-red-700 top-[40%] right-[45%] cursor-pointer rounded-xl p-2 transition-opacity duration-500 ${
+            className={`absolute bg-neutral-700 hover:bg-red-700 group-hover:bg-red-700 top-[40%] right-[45%] cursor-pointer rounded-xl p-2 transition-opacity duration-500 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
